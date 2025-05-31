@@ -18,7 +18,8 @@ public class NEUItem {
     int damage;
     List<String> lore;
     @SerializedName("internalname")
-    @NEUId String skyblockItemId;
+    @NEUId
+    String skyblockItemId;
     String crafttext;
     String clickcommand;
     String modver;
@@ -31,8 +32,8 @@ public class NEUItem {
     int z;
     String island;
 
-	@SerializedName("breakingpower")
-	int breakingPower;
+    @SerializedName("breakingpower")
+    int breakingPower;
 
     @SerializedName("recipe")
     @Getter(value = AccessLevel.PRIVATE)
@@ -41,7 +42,11 @@ public class NEUItem {
     @Getter(value = AccessLevel.PRIVATE)
     List<NEURecipe> recipeList = new ArrayList<>();
 
-
+    //Items a Minion (Super) Compactor would make out of it as next tier. I recommend adding a Kotlin Extension function for easy use.
+    @SerializedName("compactstoo")
+    String compactsTooItemId;
+    @SerializedName("supercompactstoo")
+    String superCompactsTooItemId;
     transient volatile List<NEURecipe> recipes;
 
     /**
