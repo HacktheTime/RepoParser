@@ -108,3 +108,12 @@ publishing {
         }
     }
 }
+
+tasks.withType<Javadoc> {
+    // schaltet alle DocLint-Checks ab und unterdrückt Ausgaben
+    (options as StandardJavadocDocletOptions).addStringOption("Xdoclint:none", "-quiet")
+}
+//disabled task to make it jitpack compatible.
+tasks.named<Test>("test") {
+    enabled = false
+}
