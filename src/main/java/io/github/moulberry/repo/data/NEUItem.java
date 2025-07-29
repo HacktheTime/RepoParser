@@ -43,10 +43,6 @@ public class NEUItem {
     List<NEURecipe> recipeList = new ArrayList<>();
 
     //Items a Minion (Super) Compactor would make out of it as next tier. I recommend adding a Kotlin Extension function for easy use.
-    @SerializedName("compactstoo")
-    String compactsTooItemId;
-    @SerializedName("supercompactstoo")
-    String superCompactsTooItemId;
     transient volatile List<NEURecipe> recipes;
 
     /**
